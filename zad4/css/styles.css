@@ -1,0 +1,163 @@
+@charset "UTF-8";
+
+body {
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+}
+
+body, input {
+    font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+    fill: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+}
+
+header input {
+    transition: all .5s ease-in-out;
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 15px 0 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 0 0 10px #d9d9d9;
+    outline: none;
+
+    appearance: none;
+}
+
+header input:focus, header input:hover
+{ 
+    
+    border: 0.2px solid #9ecaed;
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 20px #9ecaed;
+}
+
+header input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+ul.todo {
+    width: 100%;
+    float: left;
+}
+
+ul.todo li {
+    width: 100%;
+    min-height: 50px;
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+    word-break: break-word;
+    }
+
+ul.todo li:last-of-type {
+    margin: 0;
+}
+
+ul.todo li .buttons {
+    height: 50px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+ul.todo li .buttons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    background: none;
+    position: relative;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    background: #edf0f1;
+
+    position: absolute;
+    top: 10px;
+    left: 0;
+}
+
+ul.todo li .buttons button svg {
+    width: 22px;
+    height: 22px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: -11px 0 0 -11px;
+}
+
+ul.todo li .buttons button svg  {
+    transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg  {
+    fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg {
+    fill: #e85656;
+}
+
+
+ul.todo#todo:empty:after {
+    content: 'There is nothing to do!';
+    margin: 15px 0 0 0;
+}
+
+
+ul.todo#todo:after{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
